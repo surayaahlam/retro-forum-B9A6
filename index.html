@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Form using api</title>
+    <!-- daisyUI and tailwind css cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome kit link -->
+    <script src="https://kit.fontawesome.com/43c9d1f051.js" crossorigin="anonymous"></script>
+    <style>
+        .hero_section {
+            background-image: url(images/bgbanner.png);
+            /* background: black; */
+            height: 450px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main_container max-w-[1200px] mx-auto">
+        <!-- header area -->
+        <header>
+            <nav>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+
+                        <a href="index.html"><img src="images/logo.png" alt="website logo image"></a>
+                    </div>
+
+                    <div class="navbar-end">
+                        <ul class="flex justify-center items-center gap-5 mr-6">
+                            <li><a href="#"
+                                    class="shadow-inner bg-gray-200 border-2 border-gray-100 p-3 rounded-full"><i
+                                        class="fa-solid fa-house"></i></a></li>
+                            <li><a href="#"
+                                    class="shadow-inner bg-gray-200 border-2 border-gray-100 p-3 px-4 rounded-full"><i
+                                        class="fa-solid fa-pencil"></i></a></li>
+                            <li><a href="#"
+                                    class="shadow-inner bg-gray-200 border-2 border-gray-100 p-3 rounded-full"><i
+                                        class="fa-solid fa-user-plus"></i></a></li>
+                            <li><a href="#"
+                                    class="shadow-inner bg-gray-200 border-2 border-gray-100 p-3 px-4 rounded-full"><i
+                                        class="fa-solid fa-flag"></i></a></li>
+
+                        </ul>
+                        <a class="btn bg-[#797DFC] px-6 rounded-3xl text-white text-sm">Sign In</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero_section flex items-center justify-around w-full bg-[#12132D] text-white rounded-3xl mt-6">
+
+                <div class="hero_left">
+                    <h1 class="text-6xl font-bold">Welcome to the <br> <span class="text-[#797DFC]">ReTro</span> Forum
+                    </h1>
+                    <p class="text-sm my-5 font-normal">Share your favorite opinion and win and wp forum coffee mug!</p>
+                    <div class="search_field">
+                        <input id="userInput" type="text" placeholder="Search here anything"
+                            class="py-3 px-3 rounded-full w-[380px] outline-none text-black">
+                        <button onclick="userInputHandle()"
+                            class="bg-[#797DFC] px-6 rounded-3xl text-white text-sm py-3 -ml-[100px] ">Search</button>
+                    </div>
+                </div>
+                <div class="hero_right bg-white text-black py-4 px-6  rounded-3xl">
+                    <table class="text-[20px] text-gray-700">
+                        <tr>
+                            <td>Registered Users</td>
+                            <td class="pl-5">01</td>
+                        </tr>
+                        <tr>
+                            <td>Forum</td>
+                            <td class="pl-5">05</td>
+                        </tr>
+                        <tr>
+                            <td>Topics</td>
+                            <td class="pl-5">01</td>
+                        </tr>
+                        <tr>
+                            <td>Replies</td>
+                            <td class="pl-5">01</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- main area -->
+        <main>
+
+            <!-- section head -->
+            <div class="section_head text-center mt-24">
+                <h2 class="text-4xl font-bold pb-2">Let's Discuss</h2>
+                <p class="text-sm w-[40%] mx-auto">Yes, you can run unit tests and view the results directly within the
+                    app.
+                    The integrated testing features allow for a streamlined .</p>
+            </div>
+
+            <!-- all post section -->
+            <section class="all_post_section_container mt-12">
+
+                <div class="flex gap-4">
+                    <!-- all post left side -->
+                    <div id="allPostMainContainer" class="all_post_left w-8/12">
+
+                        <!-- <div class="card flex flex-row bg-[#F3F3F5] py-5 px-3">
+                            <div class="post_left w-[15%]">
+
+                                <div class="indicator">
+                                    <span class="indicator-item badge badge-success"></span>
+                                    <div class="avatar">
+                                        <div class="w-24 rounded-xl">
+                                            <img class="border-2 border-gray-200"
+                                                src="https://img.freepik.com/premium-vector/man-sits-desk-with-laptop-plant-background_1013341-201141.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="post_right w-3/4">
+                                <div class="post_header flex gap-4">
+                                    <p># <span>Music</span></p>
+                                    <p>Author: Awlad Hossain</p>
+                                </div>
+                                <h2 class="text-xl font-bold py-2">10 Kids Unaware of Their Halloween Costume</h2>
+                                <p>It's one thing to subject yourself to ha Halloween costume mishap because, hey that's
+                                    your
+                                    prerogative</p>
+                                <div class="border-2 border-dashed border-gray-300 my-6"></div>
+
+                                <div class="post_info flex justify-between items-center pb-5">
+                                    <ul class="flex gap-4 items-center">
+                                        <li><i class="fa-regular fa-comment-dots"></i> <span class="ml-1">560</span>
+                                        </li>
+                                        <li><i class="fa-regular fa-eye"></i> <span class="ml-1">1568</span></li>
+                                        <li><i class="fa-regular fa-clock"></i> <span class="ml-1">560</span></li>
+
+                                    </ul>
+                                    <button class="bg-[#10B981] rounded-full py-1 px-2"><i
+                                            class="fa-solid fa-envelope text-white"></i></button>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- all post right side -->
+                    <div class="all_post_right w-4/12 bg-[#F3F3F5] px-5 py-4 rounded-3xl">
+                        <div class="post_right_head flex justify-between items-center">
+                            <h2 class="text-xl font-bold">Title</h2>
+                            <p><i class="fa-solid fa-check-double text-success"></i> Marks as read <span
+                                    id="marksAsReadCounter" class="mr-3">0</span></p>
+
+                        </div>
+
+                        <div id="details_card_right" class="details_card_container">
+
+                            <!-- <div class="click_to_add_card flex items-center mt-3 rounded-xl gap-3 bg-white px-3 py-3">
+                                <p>10 Kids Unaware of Their Halloween Costume</p>
+                                <p class="flex items-center gap-2"><i class="fa-regular fa-eye"></i> <span>5600</span>
+                                </p>
+                            </div> -->
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Join our forum section -->
+
+            <section class="mt-20">
+                <div
+                    class="join_our_forum flex items-center justify-around w-full px-12 gap-6 py-20 bg-[#12132D] text-white rounded-3xl mt-6">
+
+                    <div class="join_forum_left w-8/12">
+                        <h1 class="text-6xl font-bold">Join Our Forum
+                        </h1>
+                        <p class="text-sm my-5 font-normal">Share your favorite opinion and win and wp forum coffee mug!
+                            Yes, you can run unit tests and view the results directly within the app. </p>
+                        <div class="search_field">
+
+                            <button class="bg-[#797DFC] px-6 rounded-3xl text-white text-sm py-3">Registered
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="join_forum_right w-4/12 py-4 px-6">
+                        <img src="images/joinforum.png" alt="">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- latest post section -->
+            <section class="latest_post">
+                <!-- section head -->
+                <div class="section_head text-center mt-24">
+                    <h2 class="text-4xl font-bold pb-2">Latest Post</h2>
+                    <p class="text-sm w-[40%] mx-auto">Yes, you can run unit tests and view the results directly within
+                        the
+                        app.
+                        The integrated testing features allow for a streamlined .</p>
+                </div>
+
+                <!-- latest post container -->
+                <div id="latestPostContainer" class="post_container grid grid-cols-1 md:grid-cols-3  gap-5 mt-12">
+
+                    <!-- latest post card -->
+                    <!-- 
+                    <div class="latest_post_card shadow-xl px-3 py-3 border-gray-300 border-2">
+                        <div class="w-full h-[230px]">
+                            <img class="w-full h-full rounded-xl"
+                                src="https://images.newscientist.com/wp-content/uploads/2023/02/07104439/SEI_142739270.jpg"
+                                alt="latest post img">
+                        </div>
+
+                        <p class="py-2"><i class="fa-solid fa-calendar-days"></i> <span class="text-xs font-bold">29
+                                January 2024</span></p>
+                        <h2 class="text-lg font-bold pb-2">What will a mars habitat force that impact in our daily
+                            life!!!</h2>
+                        <p class="text-sm">Yes, you can run unit tests and view the results directly within the app.
+                        </p>
+                        <div class="post_by flex gap-6 mt-3">
+                            <div class="left">
+                                <img class="w-[55px] h-[55px] rounded-full border-2 border-gray-200"
+                                    src="https://static.vecteezy.com/system/resources/thumbnails/011/153/368/small/3d-website-developer-working-on-laptop-illustration-png.png"
+                                    alt="">
+
+                            </div>
+                            <div class="right">
+                                <h3 class="text-lg font-bold">Jerome Boll</h3>
+                                <p class="text-xs font-semibold">Web Developer</p>
+                            </div>
+                        </div>
+
+                    </div>              
+                    -->
+
+
+                </div>
+
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- footer area -->
+    <footer class="bg-[#F3F3F5] h-[450px] mt-20 ">
+
+        <div class="flex flex-col justify-center items-center py-16">
+            <img src="images/logo.png" alt="website logo image">
+            <p class="w-[50%] mx-auto text-center py-2">Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from 45 BC</p>
+            <ul class="flex gap-3">
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+            <p class="mt-20"><a href="https://facebook.com/mrreja.me" target="_blank" class="text-success">2017, All Rights Reserved.</p>
+
+        </div>
+
+
+    </footer>
+
+    <!-- js file link -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
